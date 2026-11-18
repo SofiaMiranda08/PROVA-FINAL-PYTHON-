@@ -1,0 +1,60 @@
+COMANDOS PARA SUBIR NO GITHUB PELO TERMINAL
+=============================================
+
+ANTES: no site do GitHub, crie um repositório novo (Public, SEM README)
+e copie o link dele.
+
+Digite um comando por vez (as linhas com # são só explicação).
+https://github.com/SofiaMiranda08/PROVA-FINAL-PYTHON-.git
+
+# entra na pasta do projeto
+cd caminho/da/pasta
+
+# começa o git
+git init
+
+# seleciona todos os arquivos
+git add .
+
+# salva os arquivos
+git commit -m "primeiro envio"
+
+# dá o nome main para a branch
+git branch -M main
+
+# liga com o seu repositório (cole o seu link)
+git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+
+# envia (pede o login do GitHub)
+git push -u origin main
+
+
+DEPOIS: share.streamlit.io -> Create app -> escolha o repositório
+-> Branch: main -> Main file path: app.py -> Deploy!
+
+
+PARA MANDAR UMA CORREÇÃO
+------------------------
+git add .
+git commit -m "ajuste"
+git push
+
+
+LOGIN NUMA MÁQUINA NOVA
+-----------------------
+- No git push abre uma janela "Connect to GitHub": clique em
+  "Sign in with your browser", faça login e autorize.
+- Se pedir senha no terminal: cole um TOKEN (a senha normal não funciona).
+  GitHub -> Settings -> Developer settings -> Personal access tokens
+  -> Tokens (classic) -> Generate new token -> marque "repo".
+- Se der "Please tell me who you are", rode:
+  git config user.name "Seu Nome"
+  git config user.email "seu-email@exemplo.com"
+- Se der "Permission denied to OUTRA-PESSOA": Gerenciador de Credenciais
+  do Windows -> apague "git:https://github.com" -> git push de novo.
+
+
+AO TERMINAR (máquina que não é sua)
+-----------------------------------
+1. Gerenciador de Credenciais do Windows -> apague "git:https://github.com"
+2. Saia do GitHub e do share.streamlit.io no navegador
